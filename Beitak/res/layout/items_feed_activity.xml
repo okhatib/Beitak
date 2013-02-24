@@ -4,13 +4,13 @@
     android:layout_height="match_parent"
     android:fillViewport="true" >
 
-    <yoprod.beitak.main.CardsLayoutAnimation
+    <yoproduction.beitak.main.CardsLayoutAnimation
         android:id="@+id/CardsLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#e3e3e3"
         android:orientation="vertical" >
 
-    </yoprod.beitak.main.CardsLayoutAnimation>
+    </yoproduction.beitak.main.CardsLayoutAnimation>
 
 </ScrollView>

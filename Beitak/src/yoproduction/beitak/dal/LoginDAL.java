@@ -1,8 +1,8 @@
-package yoprod.beitak.dal;
+package yoproduction.beitak.dal;
 
 import java.sql.Connection;
 
-import yoprod.beitak.entities.Login;
+import yoproduction.beitak.entities.Login;
 
 public class LoginDAL {
 

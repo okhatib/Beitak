@@ -1,4 +1,4 @@
-package yoproduction.betak.entity;
+package yoproduction.beitak.entities;
 
 public class Room {
 	protected int roomID;

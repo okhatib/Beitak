@@ -1,5 +1,6 @@
-package yoprod.beitak.main;
+package yoproduction.beitak.main;
 
+import yoprod.beitak.main.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,7 +13,7 @@ import android.widget.TextView;
 
 public class ItemsFeedActivity extends Activity {
 
-	yoprod.beitak.main.CardsLayoutAnimation n;
+	yoproduction.beitak.main.CardsLayoutAnimation n;
 	ImageView itemImage;
 	TextView itemTitle;
 	TextView itemDesc;
@@ -21,6 +22,7 @@ public class ItemsFeedActivity extends Activity {
 	TextView itemTimePosted;
 	
 	static boolean inversed = true;
+	static int cardsID = 1;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +48,7 @@ public class ItemsFeedActivity extends Activity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		
-		n = (yoprod.beitak.main.CardsLayoutAnimation)findViewById(R.id.CardsLayout);
+		n = (yoproduction.beitak.main.CardsLayoutAnimation)findViewById(R.id.CardsLayout);
 		
 		switch (item.getItemId()) {
 	        case R.id.menu_add_item:
@@ -60,13 +62,6 @@ public class ItemsFeedActivity extends Activity {
 	    		
 	    		n.addView(row);
 	    		
-//	    		itemImage.setId(R.id.my_item_image);
-//	    		itemTitle.setId(R.id.my_item_title);
-//	    		itemDesc.setId(R.id.my_item_desc);
-//	    		itemPrice.setId(R.id.my_item_price);
-//	    		itemDatePosted.setId(R.id.my_item_date_posted);
-//	    		itemTimePosted.setId(R.id.my_item_time_posted);
-	    		
 	    		itemImage = (ImageView)findViewById(R.id.my_item_image);
 	    		itemTitle = (TextView)findViewById(R.id.my_item_title);
 	    		itemDesc = (TextView)findViewById(R.id.my_item_desc);
@@ -74,13 +69,20 @@ public class ItemsFeedActivity extends Activity {
 	    		itemDatePosted = (TextView)findViewById(R.id.my_item_date_posted);
 	    		itemTimePosted = (TextView)findViewById(R.id.my_item_time_posted);
 	    		
-	    		itemImage.setImageResource(R.drawable.ic_launcher);
+	    		itemImage.setImageResource(inversed ? R.drawable.ic_launcher : R.drawable.ic_menu_add);
 	    		itemTitle.setText(inversed ? "Item Title 1" : "Item Title 2");
 	    		itemDesc.setText(inversed ? "Item Description 1" : "Item Description 2");
 	    		itemPrice.setText(inversed ? "100 L.E." : "200 L.E.");
 	    		itemDatePosted.setText(inversed ? "1/1/2013" : "2/2/2013");
 	    		itemTimePosted.setText(inversed ? "13:59:59" : "14:59:59");
 
+	    		itemImage.setId(findId());
+	    		itemTitle.setId(findId());
+	    		itemDesc.setId(findId());
+	    		itemPrice.setId(findId());
+	    		itemDatePosted.setId(findId());
+	    		itemTimePosted.setId(findId());
+	    		
 	    		inversed = !inversed;
 	    		
 	    		return true;
@@ -95,4 +97,12 @@ public class ItemsFeedActivity extends Activity {
 		return false;
 	}
 
+	// Returns a valid id that isn't in use
+	public int findId(){  
+	    View v = findViewById(cardsID);  
+	    while (v != null){  
+	        v = findViewById(++cardsID);  
+	    }  
+	    return cardsID++;  
+	}
 }

@@ -1,4 +1,4 @@
-package yoproduction.betak.entity;
+package yoproduction.beitak.entities;
 
 public enum Gender {
 	male, female

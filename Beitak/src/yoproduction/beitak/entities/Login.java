@@ -1,4 +1,4 @@
-package yoprod.beitak.entities;
+package yoproduction.beitak.entities;
 
 public class Login {
 	private int loginID;

@@ -1,4 +1,4 @@
-package yoproduction.betak.entity;
+package yoproduction.beitak.entities;
 
 import java.util.Date;
 

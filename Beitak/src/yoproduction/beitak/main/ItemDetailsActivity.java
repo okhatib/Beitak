@@ -1,23 +1,22 @@
-package yoprod.beitak.main;
+package yoproduction.beitak.main;
 
-import android.os.Bundle;
+import yoprod.beitak.main.R;
 import android.app.Activity;
+import android.os.Bundle;
 import android.view.Menu;
 
-public class PersonalProfileActivity extends Activity {
+public class ItemDetailsActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.personal_profile_activity);
+		setContentView(R.layout.item_details_activity);
 	}
-	
-	//hello commit
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.personal_profile_activity, menu);
+		getMenuInflater().inflate(R.menu.item_details_activity_menu, menu);
 		return true;
 	}
 

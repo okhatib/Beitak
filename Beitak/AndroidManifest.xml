@@ -14,15 +14,15 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="yoprod.beitak.main.ItemsFeedActivity"
+            android:name="yoproduction.beitak.main.ItemsFeedActivity"
             android:label="@string/app_name" >
         </activity>
         <activity
-            android:name="yoprod.beitak.main.ItemDetailsActivity"
+            android:name="yoproduction.beitak.main.ItemDetailsActivity"
             android:label="@string/title_activity_second" >
         </activity>
         <activity
-            android:name="yoprod.beitak.main.LoginActivity"
+            android:name="yoproduction.beitak.main.LoginActivity"
             android:label="@string/app_name"
             android:windowSoftInputMode="adjustResize|stateVisible" >
             <intent-filter>
@@ -32,7 +32,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="yoprod.beitak.main.PersonalProfileActivity"
+            android:name="yoproduction.beitak.main.PersonalProfileActivity"
             android:label="@string/title_activity_personal_profile" >
         </activity>
     </application>

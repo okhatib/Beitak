@@ -1,5 +1,6 @@
-package yoprod.beitak.main;
+package yoproduction.beitak.main;
 
+import yoprod.beitak.main.R;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
