@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PersonalProfileActivity" 
+    style="@style/nowCardStyle" >
+
+    <ImageView
+        android:id="@+id/my_profile_image"
+        android:contentDescription="@string/hello_world"
+        android:src="@drawable/black"
+        android:minWidth="40dp"
+        android:minHeight="40dp"
+        android:maxWidth="60dp"
+        android:maxHeight="60dp"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:id="@+id/my_profile_name"
+        android:text="zrxdcfghbjnk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="21dp"
+        android:layout_below="@id/my_profile_image"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/my_profile_dateofbirth"
+        android:text="zrxdcfghbjnk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/my_profile_name"
+        android:layout_below="@id/my_profile_name"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/my_profile_gender"
+        android:text="zrxdcfghbjnk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/my_profile_name"
+        android:layout_below="@id/my_profile_dateofbirth"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/my_profile_mobile"
+        android:text="zrxdcfghbjnk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/my_profile_email"
+        android:layout_below="@id/my_profile_email"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/my_profile_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/my_profile_gender"
+        android:layout_below="@+id/my_profile_gender"
+        android:text="zrxdcfghbjnk"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+    
+</RelativeLayout>
