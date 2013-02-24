@@ -11,6 +11,8 @@ public class PersonalProfileActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.personal_profile_activity);
 	}
+	
+	//hello commit
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
