@@ -46,21 +46,21 @@
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
-        android:id="@+id/my_profile_mobile"
-        android:text="zrxdcfghbjnk"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@id/my_profile_email"
-        android:layout_below="@id/my_profile_email"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
-
-    <TextView
         android:id="@+id/my_profile_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/my_profile_gender"
         android:layout_below="@+id/my_profile_gender"
         android:text="zrxdcfghbjnk"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+    
+    <TextView
+        android:id="@+id/my_profile_mobile"
+        android:text="zrxdcfghbjnk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/my_profile_email"
+        android:layout_below="@id/my_profile_email"
         android:textAppearance="?android:attr/textAppearanceSmall" />
     
 </RelativeLayout>
