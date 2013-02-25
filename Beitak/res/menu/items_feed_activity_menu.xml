@@ -9,11 +9,13 @@
 		<item
 	        android:id="@+id/menu_add_item"
 	        android:icon="@drawable/ic_menu_add"
+	        android:title="Add"
 	        android:showAsAction="always"
 	    />
 		
 		<item
 	        android:id="@+id/menu_refresh"
+	        android:title="Refresh"
 	        android:icon="@drawable/ic_menu_refresh"
 	        android:showAsAction="ifRoom"
    		/>
@@ -29,6 +31,7 @@
 	        android:title="Share"
 	        android:icon="@drawable/ic_menu_share"
 	        android:showAsAction="ifRoom"
+	        android:actionProviderClass="android.widget.ShareActionProvider"
    		/>
    	    
    	    <item

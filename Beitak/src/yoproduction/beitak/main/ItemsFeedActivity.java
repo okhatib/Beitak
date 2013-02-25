@@ -1,5 +1,7 @@
 package yoproduction.beitak.main;
 
+import java.lang.reflect.Field;
+
 import yoprod.beitak.main.R;
 import android.app.Activity;
 import android.content.Intent;
@@ -8,11 +10,14 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewConfiguration;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class ItemsFeedActivity extends Activity {
 
+	//TODO: Apply Action Bar Sherlock to this project
+	
 	yoproduction.beitak.main.CardsLayoutAnimation n;
 	ImageView itemImage;
 	TextView itemTitle;
@@ -28,6 +33,20 @@ public class ItemsFeedActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.items_feed_activity);
+		
+		//code to force the Actionbar overflow menu to appear even when the mobile has a menu button
+		// IF ACTIONBAR SHERRLOCK IS USED THIS CODE WON'T WORK
+		
+		try {
+	        ViewConfiguration config = ViewConfiguration.get(this);
+	        Field menuKeyField = ViewConfiguration.class.getDeclaredField("sHasPermanentMenuKey");
+	        if(menuKeyField != null) {
+	            menuKeyField.setAccessible(true);
+	            menuKeyField.setBoolean(config, false);
+	        }
+	    } catch (Exception ex) {
+	        // Ignore
+	    }
 	}
 	
 	public void ClickCardButton(View v) {
@@ -70,11 +89,11 @@ public class ItemsFeedActivity extends Activity {
 	    		itemTimePosted = (TextView)findViewById(R.id.my_item_time_posted);
 	    		
 	    		itemImage.setImageResource(inversed ? R.drawable.ic_launcher : R.drawable.ic_menu_add);
-	    		itemTitle.setText(inversed ? "Item Title 1" : "Item Title 2");
-	    		itemDesc.setText(inversed ? "Item Description 1" : "Item Description 2");
-	    		itemPrice.setText(inversed ? "100 L.E." : "200 L.E.");
-	    		itemDatePosted.setText(inversed ? "1/1/2013" : "2/2/2013");
-	    		itemTimePosted.setText(inversed ? "13:59:59" : "14:59:59");
+	    		itemTitle.setText("Item Title " + cardsID);
+	    		itemDesc.setText("Item Description " + cardsID);
+	    		itemPrice.setText(cardsID + "00 L.E.");
+	    		itemDatePosted.setText(cardsID + "/1/2013");
+	    		itemTimePosted.setText(cardsID + ":59:59");
 
 	    		itemImage.setId(findId());
 	    		itemTitle.setId(findId());
@@ -98,6 +117,7 @@ public class ItemsFeedActivity extends Activity {
 	}
 
 	// Returns a valid id that isn't in use
+	//  Used to assign dynamic IDs to the cards added to the Item Feed
 	public int findId(){  
 	    View v = findViewById(cardsID);  
 	    while (v != null){  
